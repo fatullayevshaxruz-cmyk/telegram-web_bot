@@ -1,0 +1,9 @@
+.cards_constainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.heading{
+  text-align: center;
+}
