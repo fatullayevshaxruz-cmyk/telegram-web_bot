@@ -56,7 +56,7 @@ const App = () => {
   };
 
   const onSendData = useCallback(() => {
-    const queryID = telegram.initDataUnsave?.query_id;
+    const queryID = telegram.initDataUnsafe?.query_id;
 
     if(queryID) {
       fetch ('https://web-botlar-022d9082421d.herokuapp.com/web_data', {
