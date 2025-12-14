@@ -59,7 +59,7 @@ const App = () => {
     const queryID = telegram.initDataUnsafe?.query_id;
 
     if(queryID) {
-      fetch ('https://web-botlar-022d9082421d.herokuapp.com/web_data', {
+      fetch ('https://tg-web-bot-744a2aa7fa3a.herokuapp.com/web_data', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
