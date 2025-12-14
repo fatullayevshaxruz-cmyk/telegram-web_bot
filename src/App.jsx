@@ -59,7 +59,7 @@ const App = () => {
     const queryID = telegram.initDataUnsave?.query_id;
 
     if(queryID) {
-      fetch ('https://localhost:8000/web_data', {
+      fetch ('https://web-botlar-022d9082421d.herokuapp.com/web_data', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
