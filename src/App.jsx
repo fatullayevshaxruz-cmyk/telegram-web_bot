@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Card from './card/card';
 import Cart from './cart/cart';
 import { getData } from './constants/db';
+import { useCallback } from 'react';
 
 const courses = getData();
 
@@ -53,6 +54,15 @@ const App = () => {
     telegram.MainButton.show();
     
   };
+
+  const onSendData = useCallback(() => {
+    telegram.sendData(JSON.stringify (cartItems));
+  }, [cartItems]);
+  useEffect (() => {
+    telegram.onEvent('mainButtonClicked', onSendData);
+
+    return() => telegram.offEvent ('mainButtonClicked', onSendData);
+  }, [onSendData]);  
 
     return (
         <div>
